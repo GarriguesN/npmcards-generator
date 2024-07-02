@@ -7,8 +7,7 @@ const props = defineProps({
 </script>
 
 <template>
-    {{formData}}
-    <div class="border w-[80%] flex justify-between items-center rounded-t-lg bg-white text-black font-medium pr-">
+    <div class="border w-[80%] flex justify-between items-center rounded-t-lg bg-white text-black font-medium">
         <p class="pl-2 font-medium flex items-center">Your terminal!</p>
         <div class="flex space-x-2 items-center pr-2">
             <svg class="w-3 h-3 text-gray-800 hover:rounded-full hover:bg-blue-500 hover:p-0.5 hover:text-white cursor-pointer" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
@@ -20,8 +19,8 @@ const props = defineProps({
         </div>
     </div>    
 
-     <div class="p-5 w-[80%] h-[55%] text-center bg-[#282C34] border text-white rounded-b-lg font-mono">
-        <div class="p-10 border-green-500 border-2 h-[70%]">
+     <div class="p-5 w-[80%] text-center bg-[#282C34] border text-white rounded-b-lg font-mono" :class="formData.otherOptions.enableBottomInfo ? 'h-[55%]' : 'h-[38%]'"  :style="{ backgroundColor: formData.otherOptions.backgroundColor }">
+        <div class="p-10 border-2" :class="formData.otherOptions.enableBottomInfo ? 'h-[70%]' : 'h-[100%]'" :style="{ borderColor : formData.otherOptions.borderBoxColor }">
             <h1 class="text-lg font-medium space-x-2">
                 <span class="font-medium" :style="{ color: formData.name.color }" v-if="formData.name.checkbox">{{formData.name.text ? formData.name.text : 'name'}}</span>
                 <span v-if="formData.name.checkbox && formData.username.checkbox">/</span>
@@ -47,7 +46,8 @@ const props = defineProps({
             </p>
         </div>
 
-        <div class="flex mt-8 ml-20">
+        <div v-if="formData.otherOptions.enableBottomInfo">
+            <div class="flex mt-8 ml-20">
             <p class="font-bold text-blue-400 ">cmd/ctrl + click</p>
         </div>
         <div class="flex mt-5">
@@ -63,6 +63,8 @@ const props = defineProps({
                 </li>
             </ul>
         </div>
+        </div>
+        
     </div>
 </template>
 

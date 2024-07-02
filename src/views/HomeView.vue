@@ -8,37 +8,42 @@ const formData = ref({
   name: {
     text: '',
     checkbox: true,
-    color: '#41B883'
+    color: '#4ADE80'
   },
   username: {
     text: '',
     checkbox: true,
-    color: '#41B883'
+    color: '#D1D5DB'
   },
   npm: {
     text: '',
     checkbox: true,
-    color: '#41B883'
+    color: '#EF4444'
   },
   github: {
     text: '',
     checkbox: true,
-    color: '#41B883'
+    color: '#4ADE80'
   },
   linkedin: {
     text: '',
     checkbox: true,
-    color: '#41B883'
+    color: '#60A5FA'
   },
   wakatime: {
     text: '',
     checkbox: true,
-    color: '#41B883'
+    color: '#9CA3AF'
   },
   package: {
     text: '',
     checkbox: true,
-    color: '#41B883'
+    color: '#DC2626'
+  },
+  otherOptions: {
+    enableBottomInfo: true,
+    backgroundColor: '#282C34',
+    borderBoxColor: '#4ADE80'
   }
 });
 

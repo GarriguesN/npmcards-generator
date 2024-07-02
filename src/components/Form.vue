@@ -2,6 +2,7 @@
 import { ref, watch, defineEmits, defineProps } from 'vue';
 import Input from "@/components/Input.vue";
 import Button from "@/components/Button.vue";
+import ColorPicker from './ColorPicker.vue';
 
 const formData = ref({
   name: {
@@ -38,6 +39,11 @@ const formData = ref({
     text: '',
     checkbox: true,
     color: '#DC2626'
+  },
+  otherOptions: {
+    enableBottomInfo: true,
+    backgroundColor: '#282C34',
+    borderBoxColor: '#4ADE80'
   }
 });
 
@@ -65,6 +71,24 @@ const handleSubmit = (event) => {
     <Input v-model="formData.wakatime" ids="wakatimeInput" idCheckbox="wakatimeCheckbox" label="Your wakatime user!" info="https://wakatime.com/" placeholder="wakatimename" :colorPicker="'#9CA3AF'" />
     <Input v-model="formData.package" ids="cardInput" idCheckbox="cardCheckbox" label="Your package name (check it's available!)" info="npx" placeholder="Name of the package" :colorPicker="'#DC2626'" />
 
+    <div>
+      <p>Other options:</p>
+      <div class="flex space-x-2 items-center justify-center">
+        <input
+          v-model="formData.otherOptions.enableBottomInfo"
+          id="enableBottomInfo"
+          type="checkbox"
+          class="w-4 h-4 accent-green-500 text-green-600 bg-gray-100 border-gray-300 rounded focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+        > 
+        <label for="enableBottomInfo">Enable bottom info</label>
+
+        <ColorPicker v-model="formData.otherOptions.backgroundColor" /> 
+        <label for="backgroundColor" class="pl-4">Background color</label>
+
+        <ColorPicker v-model="formData.otherOptions.borderBoxColor" /> 
+        <label for="borderBoxColor" class="pl-4">BorderBox color</label>
+      </div>
+    </div>
     <div class="flex justify-center pt-2">
       <Button :type="'submit'" label="GENERATE !" />
     </div>
