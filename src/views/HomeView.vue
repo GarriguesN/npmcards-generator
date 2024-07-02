@@ -11,7 +11,7 @@
   </div>
 
 
-  <div id="col2" class="flex-1">
+  <div id="col2" class="flex-1 border-l-2 border-green-700">
 
   </div>
   </div>

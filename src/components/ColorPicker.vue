@@ -14,8 +14,12 @@ const props = defineProps({
     <label>
         <input
             type="color"
-            class="color-picker"
+            class="bg-transparent outline-none w-[400%]"
+            value="#41B883"
         >
     </label>
 </template>
 
+<style>
+
+</style>
