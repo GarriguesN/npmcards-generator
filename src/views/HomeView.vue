@@ -1,22 +1,63 @@
 <script setup>
-  import Form from "@/components/Form.vue"
-  import StarsBackground from "@/components/StarsBackground.vue"
-  import Preview from "@/components/Preview.vue"
+import { ref } from 'vue';
+import Form from "@/components/Form.vue";
+import StarsBackground from "@/components/StarsBackground.vue";
+import Preview from "@/components/Preview.vue";
+
+const formData = ref({
+  name: {
+    text: '',
+    checkbox: true,
+    color: '#41B883'
+  },
+  username: {
+    text: '',
+    checkbox: true,
+    color: '#41B883'
+  },
+  npm: {
+    text: '',
+    checkbox: true,
+    color: '#41B883'
+  },
+  github: {
+    text: '',
+    checkbox: true,
+    color: '#41B883'
+  },
+  linkedin: {
+    text: '',
+    checkbox: true,
+    color: '#41B883'
+  },
+  wakatime: {
+    text: '',
+    checkbox: true,
+    color: '#41B883'
+  },
+  package: {
+    text: '',
+    checkbox: true,
+    color: '#41B883'
+  }
+});
+
+const updateFormData = (data) => {
+  formData.value = data;
+};
 </script>
 
 <template>
   <div id="content" class="flex-grow flex h-full">
     <div id="col1" class="flex flex-1 justify-center items-center">
       <StarsBackground/>
-      <Form></Form>
-  </div>
+      <Form @update:formData="updateFormData"></Form>
+    </div>
 
-
-  <div id="col2" class="flex flex-col flex-1 border-l-2 w-full justify-center items-center align-middle border-green-700">
-    <h1 class=" text-3xl font-mono ">NPX CARD PREVIEW</h1>
-    <p class="mb-10 text-sm font-mono">This is a basic preview and may look different depending on your terminal</p>
-    <Preview></Preview>
+    <div id="col2" class="flex flex-col flex-1 border-l-2 w-full justify-center items-center align-middle border-green-700">
+      <h1 class=" text-3xl font-mono ">NPX CARD PREVIEW</h1>
+      <p class="mb-10 text-sm font-mono">This is a basic preview and may look different depending on your terminal</p>
+      <Preview :formData="formData"></Preview>
+    </div>
   </div>
-  </div>
-  
 </template>
