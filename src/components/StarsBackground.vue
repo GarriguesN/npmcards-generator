@@ -1,13 +1,10 @@
 <template>
-
         <div class="bg-animation max-w-full w-[50%] max-h-full h-full">
             <div id="stars"></div>
             <div id="stars2"></div>
             <div id="stars3"></div>
             <div id="stars4"></div>
         </div>
-
-
 </template>
 
 <style>
