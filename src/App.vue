@@ -12,7 +12,7 @@ setTimeout(() => {
 </script>
 
 <template>
-<div class="h-min-full h-max-fit bg-slate-700">
+<div class="flex flex-col min-h-[100dvh] w-screen">
     <StartView v-if="isStarting" />
 
     <RouterView v-else/>
