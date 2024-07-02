@@ -17,16 +17,16 @@
             <h1 class="text-lg font-medium"><span class="font-medium text-green-500">Your Name</span> / <span class="font-medium text-gray-300">@yourname</span></h1>
             <ul class="mt-8 space-y-1">
                 <li>
-                    <p><strong class="mr-2">npm:</strong>https://npmjs.com/<span class="text-red-500">~npmusername</span></p>
+                    <p><strong class="mr-2">npm:</strong><span class="hover:cursor-pointer hover:underline">https://npmjs.com/<span class="text-red-500">~npmusername</span></span></p>
                 </li>
                 <li>
-                    <p><strong class="mr-2">GitHub:</strong>https://github.com/<span class="text-green-400">githubtag</span></p>
+                    <p><strong class="mr-2">GitHub:</strong><span class="hover:cursor-pointer hover:underline">https://github.com/<span class="text-green-400">githubtag</span></span></p>
                 </li>
                 <li>
-                    <p><strong class="mr-2">LinkedIn:</strong>https://www.linkedin.com/in/<span class="text-blue-400">linkedinurl</span></p>
+                    <p><strong class="mr-2">LinkedIn:</strong><span class="hover:cursor-pointer hover:underline">https://www.linkedin.com/in/<span class="text-blue-400">linkedinurl</span></span></p>
                 </li>
                 <li>
-                    <p><strong class="mr-2">Wakatime:</strong> https://wakatime.com/<span class="text-gray-400">wakatimename</span></p>
+                    <p><strong class="mr-2">Wakatime:</strong><span class="hover:cursor-pointer hover:underline">https://wakatime.com/<span class="text-gray-400">wakatimename</span></span></p>
                 </li>
             </ul>
 
